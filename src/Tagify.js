@@ -3,6 +3,7 @@ import './main.scss'
 // import { Twemoji } from 'react-emoji-render';
 // import {times} from'react-icons/fa'
 import CloseIcon from '@material-ui/icons/Close';
+import AddIcon from '@material-ui/icons/Add';
 
 const default_array = [{ id: 1, detail: 'react' }, { id: 2, detail: 'javascript' },
     { id: 3, detail: 'yoyo' }, { id: 4, detail: 'read' }]
@@ -154,7 +155,7 @@ const Tagify = (props) => {
                 </div>
             {inputValue ?
                 <div
-                    className='keyword_container'>
+                    className='keyword_container' style={{  height:new_array.length != 0 ? 200:'auto'}}>
                     {new_array.length != 0 ? new_array.map((item, index) => <div
                         className='Search-Result'
                         key={index}
@@ -163,8 +164,15 @@ const Tagify = (props) => {
                        <p className='keyword_text'> {item.detail}</p>
                     </div>) :
                       
-                            <div className={'unsaved_keyword'}  onClick={() => { saveTag(inputValue); revealshowbox(false) }}>{inputValue}</div>
+                        <div className='unsaved_keyword' onClick={() => { saveTag(inputValue); revealshowbox(false) }}>
+                           <p > <AddIcon/> </p> 
+                        </div>
                     }
+                    
+                    {/* {new_array.length == 0 ?
+                       <div className={'unsaved_keyword'}  onClick={() => { saveTag(inputValue); revealshowbox(false) }}>{inputValue}</div>   
+                  :null  } */}
+
             </div>:null}
             
         </div>
