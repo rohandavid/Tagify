@@ -169,9 +169,6 @@ const Tagify = (props) => {
                         </div>
                     }
                     
-                    {/* {new_array.length == 0 ?
-                       <div className={'unsaved_keyword'}  onClick={() => { saveTag(inputValue); revealshowbox(false) }}>{inputValue}</div>   
-                  :null  } */}
 
             </div>:null}
             
