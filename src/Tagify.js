@@ -155,7 +155,9 @@ const Tagify = (props) => {
                 </div>
             {inputValue ?
                 <div
-                    className='keyword_container' style={{  height:new_array.length != 0 ? 200:'auto'}}>
+                    className='keyword_container'
+                    style={{ height: new_array.length != 0 ? 200 : 'auto' }}
+                >
                     {new_array.length != 0 ? new_array.map((item, index) => <div
                         className='Search-Result'
                         key={index}
