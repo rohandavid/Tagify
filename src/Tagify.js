@@ -101,8 +101,7 @@ const Tagify = (props) => {
     }
 
     const tagFilterHandler = e => {
-        console.log('value of e is', e.target.value); 
-        setinputValue(e.target.value)
+        setinputValue(e.target.value.toString().toLowerCase())
         setText(false)
     }
     
